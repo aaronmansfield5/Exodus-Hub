@@ -9,6 +9,43 @@ _G = {
     }
 }
 
+Scripts = {
+    Verified = {
+        {
+            Title = "Universal ESP",
+            Description = "This is the best ESP script you could ask for\nCreated by ic3w0lf22",
+            Denied = nil,
+            URL = "",
+            PlaceId = nil
+        }, {
+            Title = "Universal Aimbot",
+            Description = "This is the best Aimbot script you could ask for\nCreated by Eclipse Hub",
+            Denied = { 'Solara' },
+            URL = "",
+            PlaceId = nil
+        }, {
+            Title = "Huge Games PS99",
+            Description = "This is the only Pet Sim 99 script you'll ever need\nCreated by HugeGames",
+            Denied = { 'Solara' },
+            URL = "",
+            PlaceId = nil
+        }, {
+            Title = "Miner's Haven Ultimate",
+            Description = "This is an All-In-One script for Miner's Haven\nCreated by YellowTripleG",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/aaronmansfield5/aaronmansfield5.github.io/main/MH.lua",
+            PlaceId = 258258996
+        }
+    },
+    Unverified = {
+        {
+            Title = "REDZ Hub",
+            Description = "A popular PS99 utilities script\nCreated by REDZ",
+            URL = ""
+        }
+    }
+}
+
 local name, version = getexecutorname()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
@@ -57,135 +94,141 @@ Tabs.Main:AddParagraph({
 
 local VerifiedSection = Tabs.Scripts:AddSection("Verified Scripts")
 
-VerifiedSection:AddButton({
-    Title = "Universal ESP ★",
-    Description = "This is the best ESP script you could ask for\nCreated by ic3w0lf22",
-    Callback = function()
-        Fluent:Notify({
-            Title = "Script Execution",
-            Content = "Now executing Universal ESP",
-            SubContent = "Exodus Hub",
-            Duration = 5
-        })
-    end
-})
-VerifiedSection:AddButton({
-    Title = "Universal Aimbot ★",
-    Description = "This is the best Aimbot script you could ask for\nCreated by Eclipse Hub",
-    Callback = function()
-        if (name ~= "Solara") then
-            Fluent:Notify({
-                Title = "Script Execution",
-                Content = "Now executing Universal Aimbot",
-                SubContent = "Exodus Hub",
-                Duration = 5
-            })
-        else
-            Window:Dialog({
-                Title = "Disclaimer",
-                Content = "We have detected that you're using Solara; as a result 'Universal Aimbot' may not run as expected.",
-                Buttons = {
-                    { 
-                        Title = "Execute",
-                        Callback = function()
-                            Fluent:Notify({
-                                Title = "Script Execution",
-                                Content = "Now executing Universal Aimbot",
-                                SubContent = "Exodus Hub",
-                                Duration = 5
-                            })
-                        end 
-                    }, {
-                        Title = "Cancel",
-                        Callback = function()
-                            
-                        end 
-                    }
-                }
-            })
-        end
-    end
-})
-VerifiedSection:AddButton({
-    Title = "Huge Games PS99 ★",
-    Description = "This is the only Pet Sim 99 script you'll ever need\nCreated by HugeGames",
-    Callback = function()
-        if (name ~= "Solara") then
-            Fluent:Notify({
-                Title = "Script Execution",
-                Content = "Now executing HugeGames",
-                SubContent = "Exodus Hub",
-                Duration = 5
-            })
-        else
-            Window:Dialog({
-                Title = "Disclaimer",
-                Content = "We have detected that you're using Solara; as a result 'Huge Games PS99' may not run as expected.",
-                Buttons = {
-                    { 
-                        Title = "Execute",
-                        Callback = function()
-                            Fluent:Notify({
-                                Title = "Script Execution",
-                                Content = "Now executing HugeGames",
-                                SubContent = "Exodus Hub",
-                                Duration = 5
-                            })
-                        end 
-                    }, {
-                        Title = "Cancel",
-                        Callback = function()
-                            
-                        end 
-                    }
-                }
-            })
-        end
-    end
-})
-VerifiedSection:AddButton({
-    Title = "Miner's Haven ★",
-    Description = "This is an All-In-One script for Miner's Haven\nCreated by YellowTripleG",
-    Callback = function()
-        Fluent:Notify({
-            Title = "Script Execution",
-            Content = "Now executing Miner's Haven Ultimate",
-            SubContent = "Exodus Hub",
-            Duration = 5
-        })
-    end
-})
-
-local UnverifiedSection = Tabs.Scripts:AddSection("Unverified Scripts")
-
-UnverifiedSection:AddButton({
-    Title = "REDZ Hub",
-    Description = "A popular PS99 utilities script\nCreated by REDZ",
-    Callback = function()
-        Window:Dialog({
-            Title = "Disclaimer",
-            Content = "This script may not be safe as it is unverified; execute at your own risk.",
-            Buttons = {
-                { 
-                    Title = "Execute",
-                    Callback = function()
+for i, v in ipairs(Scripts.Verified) do
+    VerifiedSection:AddButton({
+        Title = v.Title.." ★",
+        Description = v.Description,
+        Callback = function()
+            if(_G.SmartExec and v.PlaceId) then
+                if(game.PlaceId == v.PlaceId) then
+                    if(not v.Denied) then
                         Fluent:Notify({
                             Title = "Script Execution",
-                            Content = "Now executing REDZ Hub",
+                            Content = "Now executing "..v.Title,
                             SubContent = "Exodus Hub",
                             Duration = 5
                         })
-                    end 
-                }, {
-                    Title = "Cancel",
-                    Callback = function()
-                        
-                    end 
+                        loadstring(game:HttpGet(v.URL, true))()
+                    else
+                        Window:Dialog({
+                            Title = "Disclaimer",
+                            Content = "We have detected that you're using Solara; as a result '"..v.Title.."' may not run as expected.",
+                            Buttons = {
+                                { 
+                                    Title = "Execute",
+                                    Callback = function()
+                                        Fluent:Notify({
+                                            Title = "Script Execution",
+                                            Content = "Now executing "..v.Title,
+                                            SubContent = "Exodus Hub",
+                                            Duration = 5
+                                        })
+                                    end 
+                                }, {
+                                    Title = "Cancel",
+                                    Callback = function()
+                                        
+                                    end 
+                                }
+                            }
+                        })
+                    end
+                else
+                    Window:Dialog({
+                        Title = "Disclaimer",
+                        Content = "Smart Execution has detected that you are not in the right game for "..v.Title..". Would you like to execute anyway?",
+                        Buttons = {
+                            { 
+                                Title = "Execute",
+                                Callback = function()
+                                    Fluent:Notify({
+                                        Title = "Script Execution",
+                                        Content = "Now executing "..v.Title,
+                                        SubContent = "Exodus Hub",
+                                        Duration = 5
+                                    })
+                                    loadstring(game:HttpGet(v.URL, true))()
+                                end
+                            }, {
+                                Title = "Cancel",
+                                Callback = function()
+                                    
+                                end 
+                            }
+                        }
+                    })
+                end
+            else
+                if(not v.Denied) then
+                    Fluent:Notify({
+                        Title = "Script Execution",
+                        Content = "Now executing "..v.Title,
+                        SubContent = "Exodus Hub",
+                        Duration = 5
+                    })
+                    loadstring(game:HttpGet(v.URL, true))()
+                else
+                    Window:Dialog({
+                        Title = "Disclaimer",
+                        Content = "We have detected that you're using Solara; as a result '"..v.Title.."' may not run as expected.",
+                        Buttons = {
+                            { 
+                                Title = "Execute",
+                                Callback = function()
+                                    Fluent:Notify({
+                                        Title = "Script Execution",
+                                        Content = "Now executing "..v.Title,
+                                        SubContent = "Exodus Hub",
+                                        Duration = 5
+                                    })
+                                    loadstring(game:HttpGet(v.URL, true))()
+                                end
+                            }, {
+                                Title = "Cancel",
+                                Callback = function()
+                                    
+                                end 
+                            }
+                        }
+                    })
+                end
+            end
+        end
+    })
+end
+
+local UnverifiedSection = Tabs.Scripts:AddSection("Unverified Scripts")
+
+for i, v in ipairs(Scripts.Unverified) do
+    UnverifiedSection:AddButton({
+        Title = v.Title,
+        Description = v.Description,
+        Callback = function()
+            Window:Dialog({
+                Title = "Disclaimer",
+                Content = "This script may not be safe as it is unverified; execute at your own risk.",
+                Buttons = {
+                    { 
+                        Title = "Execute",
+                        Callback = function()
+                            Fluent:Notify({
+                                Title = "Script Execution",
+                                Content = "Now executing "..v.Title,
+                                SubContent = "Exodus Hub",
+                                Duration = 5
+                            })
+                        end 
+                    }, {
+                        Title = "Cancel",
+                        Callback = function()
+                            
+                        end 
+                    }
                 }
-            }
-        })
-    end
-})
+            })
+        end
+    })
+end
 
 local Input = Tabs.Keys:AddInput("Input", {
     Title = "Universal Aimbot",

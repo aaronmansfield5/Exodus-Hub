@@ -1,4 +1,6 @@
-function execute(script)
+local Execution = {}
+
+function Execution.Execute(script)
     local url = script['name']
     local name = script['name']
     local verified = script['verified']
@@ -9,3 +11,5 @@ function execute(script)
 
     end
 end
+
+return Execution
