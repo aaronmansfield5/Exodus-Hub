@@ -5,10 +5,6 @@ _G = {
     JumpPower = 32
 }
 
-function execute(isVerified, script) 
-
-end
-
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -95,7 +91,7 @@ UnverifiedSection:AddButton({
                     Callback = function()
                         Fluent:Notify({
                             Title = "Script Execution",
-                            Content = "Now executing Miner's REDZ Hub",
+                            Content = "Now executing REDZ Hub",
                             SubContent = "Exodus Hub",
                             Duration = 5
                         })
