@@ -15,7 +15,7 @@ Scripts = {
             Title = "Universal ESP",
             Description = "This is the best ESP script you could ask for\nCreated by ic3w0lf22",
             Denied = nil,
-            URL = "",
+            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/esp.lua",
             PlaceId = nil
         }, {
             Title = "Universal Aimbot",
@@ -33,7 +33,7 @@ Scripts = {
             Title = "Miner's Haven Ultimate",
             Description = "This is an All-In-One script for Miner's Haven\nCreated by YellowTripleG",
             Denied = nil,
-            URL = "https://raw.githubusercontent.com/aaronmansfield5/aaronmansfield5.github.io/main/MH.lua",
+            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/MH.lua",
             PlaceId = 258258996
         }
     },
@@ -50,6 +50,7 @@ local name, version = getexecutorname()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Utils = loadstring(game:HttpGet(""))
 
 local Window = Fluent:CreateWindow({
     Title = "Exodus Hub",
@@ -99,6 +100,11 @@ for i, v in ipairs(Scripts.Verified) do
         Title = v.Title.." ★",
         Description = v.Description,
         Callback = function()
+            if(_G.SmartExec and v.PlaceId) then
+                if(game.PlaceId == v.PlaceId) then
+                    if(not v.Denied) then
+
+                    else if(v.Denied[name])
             if(_G.SmartExec and v.PlaceId) then
                 if(game.PlaceId == v.PlaceId) then
                     if(not v.Denied) then
