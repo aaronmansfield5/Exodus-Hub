@@ -2,9 +2,14 @@ _G = {
     DiscordURL = 'https://discord.gg/Nd7geN8x6C',
     SmartExec = false,
     WalkSpeed = 16,
-    JumpPower = 32
+    JumpPower = 32,
+    Keys = {
+        EclipseHub = '',
+        HugeGames = ''
+    }
 }
 
+local name, version = getexecutorname()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -22,6 +27,7 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Home", Icon = "home" }),
     Scripts = Window:AddTab({ Title = "Scripts", Icon = "scroll" }),
+    Keys = Window:AddTab({ Title = "Keys", Icon = "key" }),
     Player = Window:AddTab({ Title = "Player", Icon = "user" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
@@ -52,20 +58,94 @@ Tabs.Main:AddParagraph({
 local VerifiedSection = Tabs.Scripts:AddSection("Verified Scripts")
 
 VerifiedSection:AddButton({
-    Title = "Pet Simulator 99 ★",
-    Description = "This is the only Pet Sim 99 script you'll ever need!\nCreated by YellowTripleG",
+    Title = "Universal ESP ★",
+    Description = "This is the best ESP script you could ask for\nCreated by ic3w0lf22",
     Callback = function()
         Fluent:Notify({
             Title = "Script Execution",
-            Content = "Now executing Yellow's Hub",
+            Content = "Now executing Universal ESP",
             SubContent = "Exodus Hub",
             Duration = 5
         })
     end
 })
 VerifiedSection:AddButton({
+    Title = "Universal Aimbot ★",
+    Description = "This is the best Aimbot script you could ask for\nCreated by Eclipse Hub",
+    Callback = function()
+        if (name ~= "Solara") then
+            Fluent:Notify({
+                Title = "Script Execution",
+                Content = "Now executing Universal Aimbot",
+                SubContent = "Exodus Hub",
+                Duration = 5
+            })
+        else
+            Window:Dialog({
+                Title = "Disclaimer",
+                Content = "We have detected that you're using Solara; as a result 'Universal Aimbot' may not run as expected.",
+                Buttons = {
+                    { 
+                        Title = "Execute",
+                        Callback = function()
+                            Fluent:Notify({
+                                Title = "Script Execution",
+                                Content = "Now executing Universal Aimbot",
+                                SubContent = "Exodus Hub",
+                                Duration = 5
+                            })
+                        end 
+                    }, {
+                        Title = "Cancel",
+                        Callback = function()
+                            
+                        end 
+                    }
+                }
+            })
+        end
+    end
+})
+VerifiedSection:AddButton({
+    Title = "Huge Games PS99 ★",
+    Description = "This is the only Pet Sim 99 script you'll ever need\nCreated by HugeGames",
+    Callback = function()
+        if (name ~= "Solara") then
+            Fluent:Notify({
+                Title = "Script Execution",
+                Content = "Now executing HugeGames",
+                SubContent = "Exodus Hub",
+                Duration = 5
+            })
+        else
+            Window:Dialog({
+                Title = "Disclaimer",
+                Content = "We have detected that you're using Solara; as a result 'Huge Games PS99' may not run as expected.",
+                Buttons = {
+                    { 
+                        Title = "Execute",
+                        Callback = function()
+                            Fluent:Notify({
+                                Title = "Script Execution",
+                                Content = "Now executing HugeGames",
+                                SubContent = "Exodus Hub",
+                                Duration = 5
+                            })
+                        end 
+                    }, {
+                        Title = "Cancel",
+                        Callback = function()
+                            
+                        end 
+                    }
+                }
+            })
+        end
+    end
+})
+VerifiedSection:AddButton({
     Title = "Miner's Haven ★",
-    Description = "This is an All-In-One script for Miner's Haven!\nCreated by YellowTripleG",
+    Description = "This is an All-In-One script for Miner's Haven\nCreated by YellowTripleG",
     Callback = function()
         Fluent:Notify({
             Title = "Script Execution",
@@ -80,7 +160,7 @@ local UnverifiedSection = Tabs.Scripts:AddSection("Unverified Scripts")
 
 UnverifiedSection:AddButton({
     Title = "REDZ Hub",
-    Description = "A popular alternative to Yellow's Hub\nCreated by REDZ",
+    Description = "A popular PS99 utilities script\nCreated by REDZ",
     Callback = function()
         Window:Dialog({
             Title = "Disclaimer",
@@ -104,6 +184,28 @@ UnverifiedSection:AddButton({
                 }
             }
         })
+    end
+})
+
+local Input = Tabs.Keys:AddInput("Input", {
+    Title = "Universal Aimbot",
+    Description = "Enter your key for Eclipse Hub",
+    Placeholder = "Key here...",
+    Numeric = false,
+    Finished = true,
+    Callback = function(Value)
+        _G.Keys.EclipseHub = Value
+    end
+})
+
+local Input = Tabs.Keys:AddInput("Input", {
+    Title = "Huge Games PS99",
+    Description = "Enter your key for Huge Games",
+    Placeholder = "Key here...",
+    Numeric = false,
+    Finished = true,
+    Callback = function(Value)
+        _G.Keys.EclipseHub = Value
     end
 })
 
