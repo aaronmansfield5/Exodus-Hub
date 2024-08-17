@@ -19,12 +19,12 @@ function Execution.Execute(Script, v, Fluent, Window)
                     Window:Dialog({
                         Title = "Disclaimer",
                         Content = "We have detected that you're using "..name.."; as a result '"..v.Title.."' may not run as expected.",
-                                 Title = "Execute",
+                        Buttons = {
+                            { 
+                                Title = "Execute",
                                 Callback = function()
                                     Fluent:Notify({
-                      Buttons = {
-                            { 
-                                         Title = "Script Execution",
+                                        Title = "Script Execution",
                                         Content = "Now executing "..v.Title,
                                         SubContent = "Exodus Hub",
                                         Duration = 5
