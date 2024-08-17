@@ -115,7 +115,15 @@ function Execution.Execute(Script, v, Fluent, Window)
             end
         end
     else
-        print(Script.Key)
+        if(v.Title == "Huge Games") then
+            getgenv().AuthKey = Script.Key
+            
+            loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
+        elseif(v.Title == "Universal Aimbot") then
+            getgenv().mainKey = Script.Key
+
+            local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+        end
     end
 end
 

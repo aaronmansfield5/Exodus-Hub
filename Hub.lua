@@ -51,8 +51,6 @@ Scripts = {
 }
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local Execution = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/modules/execution.lua"))()
 local Flight = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/fly.lua"))()
 
@@ -152,11 +150,15 @@ local Input = Tabs.Keys:AddInput("Input", {
     Description = "Enter your key for Eclipse Hub",
     Placeholder = "Key here...",
     Numeric = false,
-    Finished = true,
+    Finished = false,
     Callback = function(Value)
         for _, script in ipairs(Scripts.Verified) do
             if script.Title == "Universal Aimbot" then
-                script.Key = Value
+                if Value ~= "" then
+                    script.Key = Value
+                else
+                    script.Key = nil
+                end
                 break
             end
         end
@@ -168,11 +170,15 @@ local Input = Tabs.Keys:AddInput("Input", {
     Description = "Enter your key for Huge Games",
     Placeholder = "Key here...",
     Numeric = false,
-    Finished = true,
+    Finished = false,
     Callback = function(Value)
         for _, script in ipairs(Scripts.Verified) do
             if script.Title == "Huge Games" then
-                script.Key = Value
+                if Value ~= "" then
+                    script.Key = Value
+                else
+                    script.Key = nil
+                end
                 break
             end
         end
