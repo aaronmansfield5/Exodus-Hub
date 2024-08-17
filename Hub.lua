@@ -22,7 +22,7 @@ Scripts = {
             Title = "Universal ESP",
             Description = "This is the best ESP script you could ask for\nCreated by ic3w0lf22",
             Denied = nil,
-            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/esp.lua",
+            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/scripts/esp.lua",
             PlaceId = nil,
             Key = nil
         }, {
@@ -43,7 +43,7 @@ Scripts = {
             Title = "Miner's Haven Ultimate",
             Description = "This is an All-In-One script for Miner's Haven\nCreated by Yellow",
             Denied = nil,
-            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/MH.lua",
+            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/scripts/MH.lua",
             PlaceId = 258258996,
             Key = nil
         }, {
@@ -72,8 +72,8 @@ Scripts = {
 }
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local Execution = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/modules/execution.lua", false))()
-local Flight = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/fly.lua"))()
+local Execution = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/modules/execution.lua", false))()
+local Flight = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/scripts/fly.lua"))()
 
 local Window = Fluent:CreateWindow({
     Title = "Exodus Hub",
