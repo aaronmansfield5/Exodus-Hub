@@ -52,6 +52,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local Utils = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/modules/utils.lua"))()
 local Execution = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/modules/execution.lua"))()
+local Flight = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/fly.lua"))()
 
 local Window = Fluent:CreateWindow({
     Title = "Exodus Hub",
@@ -111,7 +112,7 @@ for i, v in ipairs(Scripts.Verified) do
                             Duration = 5
                         })
                         loadstring(game:HttpGet(v.URL, true))()
-                    else if(Utils.Includes(v.Denied, name)) then
+                    elseif(Utils.Includes(v.Denied, name)) then
                         Window:Dialog({
                             Title = "Disclaimer",
                             Content = "We have detected that you're using "..name.."; as a result '"..v.Title.."' may not run as expected.",
@@ -177,7 +178,7 @@ for i, v in ipairs(Scripts.Verified) do
                         Duration = 5
                     })
                     loadstring(game:HttpGet(v.URL, true))()
-                else if(Utils.Includes(v.Denied, name)) then
+                elseif(Utils.Includes(v.Denied, name)) then
                     Window:Dialog({
                         Title = "Disclaimer",
                         Content = "We have detected that you're using "..name.."; as a result '"..v.Title.."' may not run as expected.",
@@ -300,7 +301,7 @@ local FlightToggle = Tabs.Player:AddToggle("MyToggle",
     Title = "Fly", 
     Default = false,
     Callback = function(state)
-        _G.SmartExec = state
+        Flight.Toggle(state)
     end 
 })
 
