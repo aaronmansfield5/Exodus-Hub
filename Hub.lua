@@ -33,6 +33,13 @@ Scripts = {
             PlaceId = nil,
             Key = nil
         }, {
+            Title = "Remote Spy",
+            Description = "The only valid Remote Spy solution\nCreated by Eclipse nXjd3",
+            Denied = { 'Solara' },
+            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/scripts/remotespy.lua",
+            PlaceId = nil,
+            Key = nil
+        }, {
             Title = "Huge Games",
             Description = "This is the only Pet Sim 99 script you'll ever need\nCreated by HugeGames",
             Denied = { 'Solara' },
@@ -70,7 +77,6 @@ Scripts = {
         }, {
             Title = "Annie Hub",
             Description = "Our personal favourite Blox Fruits script\nCreated by Mars",
-            Denied = { 'Solara' },
             URL = "https://raw.githubusercontent.com/1st-Mars/Annie/main/1st.lua"
         }
     }
