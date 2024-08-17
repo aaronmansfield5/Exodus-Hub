@@ -259,6 +259,7 @@ local Input = Tabs.Keys:AddInput("Input", {
     Numeric = false,
     Finished = true,
     Callback = function(Value)
+        Execution.Execute()
         for _, script in ipairs(Scripts.Verified) do
             if script.Title == "Universal Aimbot" then
                 script.Key = Value

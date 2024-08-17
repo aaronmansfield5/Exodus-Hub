@@ -6,8 +6,7 @@ function Execution.Execute(Script)
     else
 
     end
+    print(12345)
 end
-
-print(_G.SmartExec)
 
 return Execution
