@@ -50,11 +50,9 @@ Scripts = {
     }
 }
 
-local name, version = getexecutorname()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-local Utils = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/modules/utils.lua"))()
 local Execution = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/modules/execution.lua"))()
 local Flight = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/fly.lua"))()
 
@@ -106,113 +104,10 @@ for i, v in ipairs(Scripts.Verified) do
         Title = v.Title.." ★",
         Description = v.Description,
         Callback = function()
-            if(_G.SmartExec and v.PlaceId) then
-                if(game.PlaceId == v.PlaceId) then
-                    if(not v.Denied) then
-                        Fluent:Notify({
-                            Title = "Script Execution",
-                            Content = "Now executing "..v.Title,
-                            SubContent = "Exodus Hub",
-                            Duration = 5
-                        })
-                        loadstring(game:HttpGet(v.URL, true))()
-                    elseif(Utils.Includes(v.Denied, name)) then
-                        Window:Dialog({
-                            Title = "Disclaimer",
-                            Content = "We have detected that you're using "..name.."; as a result '"..v.Title.."' may not run as expected.",
-                            Buttons = {
-                                { 
-                                    Title = "Execute",
-                                    Callback = function()
-                                        Fluent:Notify({
-                                            Title = "Script Execution",
-                                            Content = "Now executing "..v.Title,
-                                            SubContent = "Exodus Hub",
-                                            Duration = 5
-                                        })
-                                    end 
-                                }, {
-                                    Title = "Cancel",
-                                    Callback = function()
-                                        
-                                    end 
-                                }
-                            }
-                        })
-                    else
-                        Fluent:Notify({
-                            Title = "Script Execution",
-                            Content = "Now executing "..v.Title,
-                            SubContent = "Exodus Hub",
-                            Duration = 5
-                        })
-                        loadstring(game:HttpGet(v.URL, true))()
-                    end
-                else
-                    Window:Dialog({
-                        Title = "Disclaimer",
-                        Content = "Smart Execution has detected that you are not in the game intended for "..v.Title..". Would you like to execute anyway?",
-                        Buttons = {
-                            { 
-                                Title = "Execute",
-                                Callback = function()
-                                    Fluent:Notify({
-                                        Title = "Script Execution",
-                                        Content = "Now executing "..v.Title,
-                                        SubContent = "Exodus Hub",
-                                        Duration = 5
-                                    })
-                                    loadstring(game:HttpGet(v.URL, true))()
-                                end
-                            }, {
-                                Title = "Cancel",
-                                Callback = function()
-                                    
-                                end 
-                            }
-                        }
-                    })
-                end
-            else
-                if(not v.Denied) then
-                    Fluent:Notify({
-                        Title = "Script Execution",
-                        Content = "Now executing "..v.Title,
-                        SubContent = "Exodus Hub",
-                        Duration = 5
-                    })
-                    loadstring(game:HttpGet(v.URL, true))()
-                elseif(Utils.Includes(v.Denied, name)) then
-                    Window:Dialog({
-                        Title = "Disclaimer",
-                        Content = "We have detected that you're using "..name.."; as a result '"..v.Title.."' may not run as expected.",
-                        Buttons = {
-                            { 
-                                Title = "Execute",
-                                Callback = function()
-                                    Fluent:Notify({
-                                        Title = "Script Execution",
-                                        Content = "Now executing "..v.Title,
-                                        SubContent = "Exodus Hub",
-                                        Duration = 5
-                                    })
-                                end 
-                            }, {
-                                Title = "Cancel",
-                                Callback = function()
-                                    
-                                end 
-                            }
-                        }
-                    })
-                else
-                    Fluent:Notify({
-                        Title = "Script Execution",
-                        Content = "Now executing "..v.Title,
-                        SubContent = "Exodus Hub",
-                        Duration = 5
-                    })
-                    loadstring(game:HttpGet(v.URL, true))()
+            for _, script in ipairs(Scripts.Verified) do
+                if script.Title == v.Title then
+                    Execution.Execute(script, v, Fluent, Window)
+                    break
                 end
             end
         end
@@ -259,7 +154,6 @@ local Input = Tabs.Keys:AddInput("Input", {
     Numeric = false,
     Finished = true,
     Callback = function(Value)
-        Execution.Execute()
         for _, script in ipairs(Scripts.Verified) do
             if script.Title == "Universal Aimbot" then
                 script.Key = Value
