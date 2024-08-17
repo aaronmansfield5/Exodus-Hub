@@ -29,6 +29,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                         SubContent = "Exodus Hub",
                                         Duration = 5
                                     })
+                                    loadstring(game:HttpGet(v.URL, true))()
                                 end 
                             }, {
                                 Title = "Cancel",
@@ -95,6 +96,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                     SubContent = "Exodus Hub",
                                     Duration = 5
                                 })
+                                loadstring(game:HttpGet(v.URL, true))()
                             end 
                         }, {
                             Title = "Cancel",
@@ -164,6 +166,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                             SubContent = "Exodus Hub",
                                             Duration = 5
                                         })
+                                        loadstring(game:HttpGet(v.URL, true))()
                                     end 
                                 }, {
                                     Title = "Cancel",
@@ -206,6 +209,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                         SubContent = "Exodus Hub",
                                         Duration = 5
                                     })
+                                    loadstring(game:HttpGet(v.URL, true))()
                                 end 
                             }, {
                                 Title = "Cancel",
@@ -275,6 +279,8 @@ function Execution.Execute(Script, v, Fluent, Window)
                                             SubContent = "Exodus Hub",
                                             Duration = 5
                                         })
+                                        
+                        local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
                                     end 
                                 }, {
                                     Title = "Cancel",
@@ -317,6 +323,8 @@ function Execution.Execute(Script, v, Fluent, Window)
                                         SubContent = "Exodus Hub",
                                         Duration = 5
                                     })
+                                    
+                        local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
                                 end 
                             }, {
                                 Title = "Cancel",
