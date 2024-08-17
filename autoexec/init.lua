@@ -332,7 +332,6 @@ funcs.request = function(args)
   result.StatusCode = s and 200 or 400 -- Inaccurate but works i guess?
   return result
  else
-  print('script tried to send an http request with a non implemented method',args.Method)
   return {Success=false,StatusCode=404} -- 404 means not found which can cause some errors in scripts.
  end
 end
@@ -884,6 +883,5 @@ for i, v in pairs(Descendants(funcs)) do
  if not getgenv()[i] then Count = Count + 1 end
  local Result = SafeOverride(i, v)
  local str = Result == 1 and ('%s %s already exists.'):format(type(v), i) or Result == 2 and ("Added %s %s to the global environment. (%d/%d)"):format(type(v), i, Count, Total) or Result ~= 1 and Result ~= 2 and ("Unknown result for function %s."):format(type(v), i)
- print(str)
 end
 funcs.syn.protect_gui(DrawingDict)
