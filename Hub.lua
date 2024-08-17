@@ -160,6 +160,7 @@ for i, v in ipairs(Scripts.Unverified) do
                                 SubContent = "Exodus Hub",
                                 Duration = 5
                             })
+                            loadstring(game:HttpGet(v.URL, true))()
                         end 
                     }, {
                         Title = "Cancel",
