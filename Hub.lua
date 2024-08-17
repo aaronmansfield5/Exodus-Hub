@@ -34,7 +34,7 @@ Scripts = {
             Key = nil
         }, {
             Title = "Miner's Haven Ultimate",
-            Description = "This is an All-In-One script for Miner's Haven\nCreated by YellowTripleG",
+            Description = "This is an All-In-One script for Miner's Haven\nCreated by Yellow",
             Denied = nil,
             URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/MH.lua",
             PlaceId = 258258996,
@@ -51,7 +51,7 @@ Scripts = {
 }
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local Execution = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/modules/execution.lua"))()
+local Execution = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/modules/execution.lua", false))()
 local Flight = loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/fly.lua"))()
 
 local Window = Fluent:CreateWindow({
@@ -92,7 +92,7 @@ Tabs.Main:AddButton({
 
 Tabs.Main:AddParagraph({
     Title = "Credits",
-    Content = "All credits for this hub go to:\n\t- YellowTripleG\n\t- Gato"
+    Content = "All credits for this hub go to:\n\t- Yellow"
 })
 
 local VerifiedSection = Tabs.Scripts:AddSection("Verified Scripts")
