@@ -338,6 +338,5 @@ function Execution.Execute(Script, v, Fluent, Window)
             end
         end
     end
-end
 
 return Execution
