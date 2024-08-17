@@ -12,6 +12,13 @@ _G = {
 Scripts = {
     Verified = {
         {
+            Title = "Infinite Yield",
+            Description = "The best AIO general script-line hub\n Created by Edge",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",
+            PlaceId = nil,
+            Key = nil
+        }, {
             Title = "Universal ESP",
             Description = "This is the best ESP script you could ask for\nCreated by ic3w0lf22",
             Denied = nil,
@@ -38,6 +45,20 @@ Scripts = {
             Denied = nil,
             URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/MH.lua",
             PlaceId = 258258996,
+            Key = nil
+        }, {
+            Title = "Cheese Escape",
+            Description = "This is the best script available for Cheese Escape\nCreated by Minion",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/MinionRoblox/CHEESE-ESCAPE/main/Scripts%20from%20Minion.lua",
+            PlaceId = 5777099015,
+            Key = nil
+        }, {
+            Title = "Annie Hub",
+            Description = "Our personal favourite Blox Fruits script\nCreated by Mars",
+            Denied = { 'Solara' },
+            URL = "https://raw.githubusercontent.com/1st-Mars/Annie/main/1st.lua",
+            PlaceId = 2753915549,
             Key = nil
         }
     },
