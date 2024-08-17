@@ -12,8 +12,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodu
 ```
 
 ## 🤔 Why Exodus?
-**Exodus Hub** is the fastest solution, we offer Smart Execution which no other Script Hub offers, as-well as that we manually verify every script that falls under our 'Verified' section, ensuring the safest user experience possible. We are proud to say that we only deliver on excellence, which is depicted by our ever-growing community.
-We also focus on user-customizability, putting the control into your hands.
+**Exodus Hub** is the fastest solution, we offer Smart Execution which no other Script Hub offers, as-well as that we manually verify every script that falls under our 'Verified' section, ensuring the safest user experience possible. We are proud to say that we only deliver on excellence, which is depicted by our ever-growing community. We also focus on user-customizability, putting the control back into your hands.
 
 ## 🗒️ Next Steps
 - [x] Usable keys for Supported Scripts
