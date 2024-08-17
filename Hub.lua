@@ -89,6 +89,10 @@ Scripts = {
             Title = "Da Hood Cash Farmer",
             Description = "A new Da Hood Cash script\nCreated by trans",
             URL = "https://rentry.co/xy2cmx6z/raw"
+        }, {
+            Title = "NVC Pet Sim 99",
+            Description = "An all new Pet Simulator 99 script\nCreated by NukeVsCity",
+            URL = "https://raw.githubusercontent.com/NukeVsCity/Scripts2024/main/ps99"
         }
     }
 }
