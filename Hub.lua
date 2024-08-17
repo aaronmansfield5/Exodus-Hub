@@ -1,6 +1,6 @@
 _G = {
     DiscordURL = 'https://discord.gg/Nd7geN8x6C',
-    SmartExec = false,
+    SmartExec = true,
     WalkSpeed = 16,
     JumpPower = 32,
     Keys = {
@@ -71,13 +71,17 @@ Scripts = {
     },
     Unverified = {
         {
-            Title = "REDZ Hub",
-            Description = "A popular PS99 utilities script\nCreated by REDZ",
+            Title = "REDz Hub",
+            Description = "A popular PS99 utilities script\nCreated by REDz",
             URL = "https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"
         }, {
             Title = "Annie Hub",
-            Description = "Our personal favourite Blox Fruits script\nCreated by Mars",
+            Description = "An awesome Blox Fruits script\nCreated by Mars",
             URL = "https://raw.githubusercontent.com/1st-Mars/Annie/main/1st.lua"
+        }, {
+            Title = "Da Hood Cash Farmer",
+            Description = "A new Da Hood Cash script\nCreated by trans",
+            URL = "https://rentry.co/xy2cmx6z/raw"
         }
     }
 }
@@ -259,7 +263,7 @@ local SEToggle = Tabs.Settings:AddToggle("MyToggle",
 {
     Title = "Smart Execution", 
     Description = "Verified scripts will not execute if you aren't in the correct game",
-    Default = false,
+    Default = true,
     Callback = function(state)
         _G.SmartExec = state
     end 
