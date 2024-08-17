@@ -1,7 +1,7 @@
 local Flight = {}
 
 repeat wait()
-until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and (game['Players - Client'].LocalPlayer.Character:FindFirstChild("Torso") or game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso")) and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and (game.Players.LocalPlayer.Character:FindFirstChild("Torso") or game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso")) and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
 local mouse = game.Players.LocalPlayer:GetMouse()
 
 repeat wait() until mouse
@@ -12,7 +12,7 @@ local flying = false
 local deb = true
 local ctrl = {f = 0, b = 0, l = 0, r = 0}
 local lastctrl = {f = 0, b = 0, l = 0, r = 0}
-local maxspeed = 100
+local maxspeed = 50
 local speed = 0
 local bg = nil
 local bv = nil
