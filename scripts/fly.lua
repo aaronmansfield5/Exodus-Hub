@@ -1,16 +1,13 @@
 local Flight = {}
 
---Waits until the player is in game
 repeat wait()
-until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and (game.Players.LocalPlayer.Character:FindFirstChild("Torso") or game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso")) and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
 local mouse = game.Players.LocalPlayer:GetMouse()
 
---Waits until the player's mouse is found
 repeat wait() until mouse
 
---Variables
 local plr = game.Players.LocalPlayer
-local torso = plr.Character.Torso
+local torso = plr.Character:FindFirstChild("Torso") or plr.Character:FindFirstChild("UpperTorso")
 local flying = false
 local deb = true
 local ctrl = {f = 0, b = 0, l = 0, r = 0}
@@ -20,7 +17,6 @@ local speed = 0
 local bg = nil
 local bv = nil
 
---Actual flying
 function Fly()
     bg = Instance.new("BodyGyro", torso)
     bg.P = 9e4
