@@ -67,6 +67,13 @@ Scripts = {
             URL = "https://raw.githubusercontent.com/Butterisgood/Butter/main/Root2.lua",
             PlaceId = 13822889,
             Key = nil
+        }, {
+            Title = "Bee Swarm Simulator",
+            Description = "The ultimate farming tool for Bee Swarm Simulator\nCreated by NukeVsCity",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/NukeVsCity/Scripts2024/main/KocmocV3",
+            PlaceId = 1537690962,
+            Key = nil
         }
     },
     Unverified = {
