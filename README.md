@@ -8,7 +8,7 @@
 
 ## ⚡ Execution
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/Hub.lua")()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/Hub.lua"))()
 ```
 
 ## 🤔 Why Exodus?
