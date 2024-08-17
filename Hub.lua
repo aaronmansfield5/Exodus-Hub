@@ -16,25 +16,29 @@ Scripts = {
             Description = "This is the best ESP script you could ask for\nCreated by ic3w0lf22",
             Denied = nil,
             URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/esp.lua",
-            PlaceId = nil
+            PlaceId = nil,
+            Key = nil
         }, {
             Title = "Universal Aimbot",
             Description = "This is the best Aimbot script you could ask for\nCreated by Eclipse Hub",
             Denied = { 'Solara' },
             URL = "",
-            PlaceId = nil
+            PlaceId = nil,
+            Key = nil
         }, {
-            Title = "Huge Games PS99",
+            Title = "Huge Games",
             Description = "This is the only Pet Sim 99 script you'll ever need\nCreated by HugeGames",
             Denied = { 'Solara' },
-            URL = "",
-            PlaceId = nil
+            URL = "https://HugeGames.io/ps99",
+            PlaceId = 8737899170,
+            Key = nil
         }, {
             Title = "Miner's Haven Ultimate",
             Description = "This is an All-In-One script for Miner's Haven\nCreated by YellowTripleG",
             Denied = nil,
             URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/dev/scripts/MH.lua",
-            PlaceId = 258258996
+            PlaceId = 258258996,
+            Key = nil
         }
     },
     Unverified = {
@@ -255,18 +259,28 @@ local Input = Tabs.Keys:AddInput("Input", {
     Numeric = false,
     Finished = true,
     Callback = function(Value)
-        _G.Keys.EclipseHub = Value
+        for _, script in ipairs(Scripts.Verified) do
+            if script.Title == "Universal Aimbot" then
+                script.Key = Value
+                break
+            end
+        end
     end
 })
 
 local Input = Tabs.Keys:AddInput("Input", {
-    Title = "Huge Games PS99",
+    Title = "Huge Games",
     Description = "Enter your key for Huge Games",
     Placeholder = "Key here...",
     Numeric = false,
     Finished = true,
     Callback = function(Value)
-        _G.Keys.EclipseHub = Value
+        for _, script in ipairs(Scripts.Verified) do
+            if script.Title == "Huge Games" then
+                script.Key = Value
+                break
+            end
+        end
     end
 })
 
@@ -335,6 +349,6 @@ ThemeDropdown:OnChanged(function(Value)
 end)
 
 game:GetService("RunService").RenderStepped:connect(function()
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = _G.WalkSpeed
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = _G.JumpPower
+    game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = _G.WalkSpeed
+    game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = _G.JumpPower
 end)
