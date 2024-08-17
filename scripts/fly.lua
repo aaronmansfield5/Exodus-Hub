@@ -1,7 +1,7 @@
 local Flight = {}
 
 repeat wait()
-until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and (game.Players.LocalPlayer.Character:FindFirstChild("Torso") or game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso")) and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and (game['Players - Client'].LocalPlayer.Character:FindFirstChild("Torso") or game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso")) and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
 local mouse = game.Players.LocalPlayer:GetMouse()
 
 repeat wait() until mouse
