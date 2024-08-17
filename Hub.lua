@@ -74,6 +74,13 @@ Scripts = {
             URL = "https://raw.githubusercontent.com/NukeVsCity/Scripts2024/main/KocmocV3",
             PlaceId = 1537690962,
             Key = nil
+        }, {
+            Title = "Huge Games PSX",
+            Description = "This script by Huge Games is by far the best for PSX\nCreated by Huge Games",
+            Denied = { 'Solara' },
+            URL = "https://v3.hugegames.io/psx",
+            PlaceId = 6284583030,
+            Key = nil
         }
     },
     Unverified = {
