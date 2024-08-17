@@ -54,13 +54,6 @@ Scripts = {
             PlaceId = 5777099015,
             Key = nil
         }, {
-            Title = "Annie Hub",
-            Description = "Our personal favourite Blox Fruits script\nCreated by Mars",
-            Denied = { 'Solara' },
-            URL = "https://raw.githubusercontent.com/1st-Mars/Annie/main/1st.lua",
-            PlaceId = 2753915549,
-            Key = nil
-        }, {
             Title = "Butter Hub",
             Description = "The only viable option for Lumber Tycoon 2\nCreated by Butterisgood",
             Denied = nil,
@@ -73,7 +66,12 @@ Scripts = {
         {
             Title = "REDZ Hub",
             Description = "A popular PS99 utilities script\nCreated by REDZ",
-            URL = ""
+            URL = "https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"
+        }, {
+            Title = "Annie Hub",
+            Description = "Our personal favourite Blox Fruits script\nCreated by Mars",
+            Denied = { 'Solara' },
+            URL = "https://raw.githubusercontent.com/1st-Mars/Annie/main/1st.lua"
         }
     }
 }
