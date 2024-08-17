@@ -60,6 +60,13 @@ Scripts = {
             URL = "https://raw.githubusercontent.com/1st-Mars/Annie/main/1st.lua",
             PlaceId = 2753915549,
             Key = nil
+        }, {
+            Title = "Butter Hub",
+            Description = "The only viable option for Lumber Tycoon 2\nCreated by Butterisgood",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/Butterisgood/Butter/main/Root2.lua",
+            PlaceId = 13822889,
+            Key = nil
         }
     },
     Unverified = {
