@@ -81,6 +81,13 @@ Scripts = {
             URL = "https://v3.hugegames.io/psx",
             PlaceId = 6284583030,
             Key = nil
+        }, {
+            Title = "Wind.wtf Rivals",
+            Description = "This is our go-to for when we play Rivals\nCreated by Hell",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/helldevelopment/RobloxScripts/main/SanityLoader.lua",
+            PlaceId = 17625359962,
+            Key = nil
         }
     },
     Unverified = {
