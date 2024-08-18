@@ -99,7 +99,7 @@ Scripts = {
             Title = "BE Hub",
             Description = "The only solution for Block Eaters\nCreated by Yellow",
             Denied = nil,
-            URL = "https://github.com/aaronmansfield5/Exodus-Hub/blob/main/scripts/be.lua",
+            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/scripts/be.lua",
             PlaceId = 16178787698,
             Key = nil
         }
