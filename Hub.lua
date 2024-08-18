@@ -88,6 +88,13 @@ Scripts = {
             URL = "https://raw.githubusercontent.com/helldevelopment/RobloxScripts/main/SanityLoader.lua",
             PlaceId = 17625359962,
             Key = nil
+        }, {
+            Title = "Rushmore Restored",
+            Description = "The most over-powered Zombie rush script around\nCreated by uvgame",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/uvgame/scriptblox/main/rushmore-restored",
+            PlaceId = 137885680,
+            Key = nil
         }
     },
     Unverified = {
