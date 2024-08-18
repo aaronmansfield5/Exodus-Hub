@@ -1,13 +1,19 @@
 local Flight = {}
 
-repeat wait()
-until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and (game.Players.LocalPlayer.Character:FindFirstChild("Torso") or game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso")) and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
-local mouse = game.Players.LocalPlayer:GetMouse()
+function getRoot(char)
+	local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+	return rootPart
+end
+
+local Players = game.Players
+
+repeat wait() until Players.LocalPlayer and Players.LocalPlayer.Character and getRoot(Players.LocalPlayer.Character) and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+local mouse = Players.LocalPlayer:GetMouse()
 
 repeat wait() until mouse
 
-local plr = game.Players.LocalPlayer
-local torso = plr.Character:FindFirstChild("Torso") or plr.Character:FindFirstChild("UpperTorso")
+local plr = Players.LocalPlayer
+local torso = getRoot(plr.Character)
 local flying = false
 local deb = true
 local ctrl = {f = 0, b = 0, l = 0, r = 0}
