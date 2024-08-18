@@ -102,6 +102,13 @@ Scripts = {
             URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/scripts/be.lua",
             PlaceId = 16178787698,
             Key = nil
+        }, {
+            Title = "Cart Ride Hub",
+            Description = "Auto Farm on Ride a Cart Simulator with this script!\nCreated by Yellow",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/scripts/cartsim.lua",
+            PlaceId = 14267508433,
+            Key = nil
         }
     },
     Unverified = {
