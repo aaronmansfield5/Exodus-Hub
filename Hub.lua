@@ -328,6 +328,10 @@ ThemeDropdown:OnChanged(function(Value)
 end)
 
 game:GetService("RunService").RenderStepped:connect(function()
-    game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = _G.WalkSpeed
-    game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = _G.JumpPower
+    local Player = game:GetService("Players").LocalPlayer
+    local Character = Player.Character or Player.CharacterAdded:wait()
+    local Humanoid = Character:FindFirstChild("Humanoid")
+
+    Humanoid.WalkSpeed = _G.WalkSpeed
+    Humanoid.game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = _G.JumpPower
 end)
