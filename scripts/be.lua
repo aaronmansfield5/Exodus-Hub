@@ -92,5 +92,8 @@ local Slider = UtilTab:CreateSlider({
 })
 
 game:GetService("RunService").RenderStepped:connect(function()
-    game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed = _G.WalkSpeed
+    local Player = game:GetService("Players").LocalPlayer
+    local Character = Player.Character or Player.CharacterAdded:wait()
+
+    Character:FindFirstChild("Humanoid").WalkSpeed = _G.WalkSpeed
 end)
