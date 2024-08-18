@@ -26,6 +26,13 @@ Scripts = {
             PlaceId = nil,
             Key = nil
         }, {
+            Title = "ESP Reloaded",
+            Description = "Very laggy and unstable, still in alpha\nCreated by Yellow",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/scripts/espreloaded.lua",
+            PlaceId = nil,
+            Key = nil
+        }, {
             Title = "Universal Aimbot",
             Description = "This is the best Aimbot script you could ask for\nCreated by Eclipse Hub",
             Denied = { 'Solara' },
