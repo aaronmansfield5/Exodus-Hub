@@ -1,4 +1,4 @@
-_G.Testing = true
+_G.Testing = false
 
 local player = game.Players.LocalPlayer
 local camera = workspace.CurrentCamera
