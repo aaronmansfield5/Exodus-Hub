@@ -333,5 +333,5 @@ game:GetService("RunService").RenderStepped:connect(function()
     local Humanoid = Character:FindFirstChild("Humanoid")
 
     Humanoid.WalkSpeed = _G.WalkSpeed
-    Humanoid.game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = _G.JumpPower
+    Humanoid.JumpPower = _G.JumpPower
 end)
