@@ -14,7 +14,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                         SubContent = "Exodus Hub",
                         Duration = 5
                     })
-                    loadstring(game:HttpGet(v.URL, true))()
+                    loadstring(game:HttpGet(v.URL, false))()
                 elseif(Utils.Includes(v.Denied, name)) then
                     Window:Dialog({
                         Title = "Disclaimer",
@@ -29,7 +29,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                         SubContent = "Exodus Hub",
                                         Duration = 5
                                     })
-                                    loadstring(game:HttpGet(v.URL, true))()
+                                    loadstring(game:HttpGet(v.URL, false))()
                                 end 
                             }, {
                                 Title = "Cancel",
@@ -46,7 +46,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                         SubContent = "Exodus Hub",
                         Duration = 5
                     })
-                    loadstring(game:HttpGet(v.URL, true))()
+                    loadstring(game:HttpGet(v.URL, false))()
                 end
             else
                 Window:Dialog({
@@ -62,7 +62,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                     SubContent = "Exodus Hub",
                                     Duration = 5
                                 })
-                                loadstring(game:HttpGet(v.URL, true))()
+                                loadstring(game:HttpGet(v.URL, false))()
                             end
                         }, {
                             Title = "Cancel",
@@ -81,7 +81,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                     SubContent = "Exodus Hub",
                     Duration = 5
                 })
-                loadstring(game:HttpGet(v.URL, true))()
+                loadstring(game:HttpGet(v.URL, false))()
             elseif(Utils.Includes(v.Denied, name)) then
                 Window:Dialog({
                     Title = "Disclaimer",
@@ -96,7 +96,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                     SubContent = "Exodus Hub",
                                     Duration = 5
                                 })
-                                loadstring(game:HttpGet(v.URL, true))()
+                                loadstring(game:HttpGet(v.URL, false))()
                             end 
                         }, {
                             Title = "Cancel",
@@ -113,7 +113,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                     SubContent = "Exodus Hub",
                     Duration = 5
                 })
-                loadstring(game:HttpGet(v.URL, true))()
+                loadstring(game:HttpGet(v.URL, false))()
             end
         end
     elseif(v.Title == "Huge Games") then
@@ -133,7 +133,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                         SubContent = "Exodus Hub",
                                         Duration = 5
                                     })
-                                    loadstring(game:HttpGet(v.URL, true))()
+                                    loadstring(game:HttpGet(v.URL, false))()
                                 end
                             }, {
                                 Title = "Cancel",
@@ -151,7 +151,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                             SubContent = "Exodus Hub",
                             Duration = 5
                         })
-                        loadstring(game:HttpGet(v.URL, true))()
+                        loadstring(game:HttpGet(v.URL, false))()
                     elseif(Utils.Includes(v.Denied, name)) then
                         Window:Dialog({
                             Title = "Disclaimer",
@@ -166,7 +166,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                             SubContent = "Exodus Hub",
                                             Duration = 5
                                         })
-                                        loadstring(game:HttpGet(v.URL, true))()
+                                        loadstring(game:HttpGet(v.URL, false))()
                                     end 
                                 }, {
                                     Title = "Cancel",
@@ -183,7 +183,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                             SubContent = "Exodus Hub",
                             Duration = 5
                         })
-                        loadstring(game:HttpGet(v.URL, true))()
+                        loadstring(game:HttpGet(v.URL, false))()
                     end
                 end
             else
@@ -194,7 +194,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                         SubContent = "Exodus Hub",
                         Duration = 5
                     })
-                    loadstring(game:HttpGet(v.URL, true))()
+                    loadstring(game:HttpGet(v.URL, false))()
                 elseif(Utils.Includes(v.Denied, name)) then
                     Window:Dialog({
                         Title = "Disclaimer",
@@ -209,7 +209,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                                         SubContent = "Exodus Hub",
                                         Duration = 5
                                     })
-                                    loadstring(game:HttpGet(v.URL, true))()
+                                    loadstring(game:HttpGet(v.URL, false))()
                                 end 
                             }, {
                                 Title = "Cancel",
@@ -226,7 +226,7 @@ function Execution.Execute(Script, v, Fluent, Window)
                         SubContent = "Exodus Hub",
                         Duration = 5
                     })
-                    loadstring(game:HttpGet(v.URL, true))()
+                    loadstring(game:HttpGet(v.URL, false))()
                 end
             end
         elseif(v.Title == "Universal Aimbot") then
