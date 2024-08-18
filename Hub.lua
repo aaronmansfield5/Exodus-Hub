@@ -26,8 +26,8 @@ Scripts = {
             PlaceId = nil,
             Key = nil
         }, {
-            Title = "ESP Reloaded",
-            Description = "Very laggy and unstable, still in alpha\nCreated by Yellow",
+            Title = "ESP Reloaded [UNSTABLE]",
+            Description = "This is in alpha, so as expected it's very unstable\nCreated by Yellow",
             Denied = nil,
             URL = "https://raw.githubusercontent.com/aaronmansfield5/Exodus-Hub/main/scripts/espreloaded.lua",
             PlaceId = nil,
