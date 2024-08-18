@@ -23,8 +23,8 @@ local Window = Rayfield:CreateWindow({
     KeySystem = false
 })
 
-local HomeTab = Window:CreateTab("Home", 4370345169)
-local UtilTab = Window:CreateTab("Utils", 17642264140)
+local HomeTab = Window:CreateTab("Home", 14456045452)
+local UtilTab = Window:CreateTab("Utils", 9753762573)
 
 local Section = HomeTab:CreateParagraph({Title = "Credits", Content = "All credits for this script go to Yellow."})
 
