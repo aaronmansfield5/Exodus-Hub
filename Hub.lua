@@ -316,7 +316,7 @@ local SEToggle = Tabs.Settings:AddToggle("MyToggle",
 {
     Title = "Smart Execution", 
     Description = "Verified scripts will not execute if you aren't in the correct game",
-    Default = true,
+    Default = _G.SmartExec,
     Callback = function(state)
         _G.SmartExec = state
     end 
