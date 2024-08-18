@@ -33,6 +33,13 @@ Scripts = {
             PlaceId = nil,
             Key = nil
         }, {
+            Title = "Dark Dex",
+            Description = "An essential game explorer for all script developers\nCreated by HummingBird8",
+            Denied = nil,
+            URL = "https://raw.githubusercontent.com/HummingBird8/HummingRn/main/OptimizedDexForSolara.lua",
+            PlaceId = nil,
+            Key = nil
+        }, {
             Title = "Remote Spy",
             Description = "The only valid Remote Spy solution\nCreated by Eclipse nXjd3",
             Denied = { 'Solara' },
