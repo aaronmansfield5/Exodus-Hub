@@ -95,6 +95,13 @@ Scripts = {
             URL = "https://raw.githubusercontent.com/uvgame/scriptblox/main/rushmore-restored",
             PlaceId = 137885680,
             Key = nil
+        }, {
+            Title = "BE Hub",
+            Description = "The only solution for Block Eaters\nCreated by Yellow",
+            Denied = nil,
+            URL = "https://github.com/aaronmansfield5/Exodus-Hub/blob/main/scripts/be.lua",
+            PlaceId = 16178787698,
+            Key = nil
         }
     },
     Unverified = {
