@@ -1,5 +1,3 @@
---[[ hello very cool incognito / solara (mostly incognito because solara has most of these functions, just not all) script showcase!! 
-pls dont steal source code :( ]]
 local bit = bit32
 function ToEnum(a)
  for i, v in pairs(Enum.KeyCode:GetEnumItems()) do if tostring(v) == a then return v end end
