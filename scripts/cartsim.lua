@@ -40,9 +40,11 @@ local FarmToggle = UtilTab:CreateToggle({
                     if v.Name == "Template" then
                         local Player = game:GetService("Players").LocalPlayer
                         local Character = Player.Character or Player.CharacterAdded:wait()
-                        local HRP = Character:FindFirstChild("HumanoidRootPart")
-                
-                        v.CFrame = HRP.CFrame
+                         if Character then
+                             local HRP = Character:FindFirstChild("HumanoidRootPart")
+
+                             v.CFrame = HRP.CFrame
+                         end
                     end
                 end
 
