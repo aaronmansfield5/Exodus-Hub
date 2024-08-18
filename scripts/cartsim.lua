@@ -12,7 +12,7 @@ local Window = Rayfield:CreateWindow({
     ConfigurationSaving = {
        Enabled = true,
        FolderName = "Yellow's Hub",
-       FileName = "BE"
+       FileName = "CRS"
     },
     Discord = {
        Enabled = true,
