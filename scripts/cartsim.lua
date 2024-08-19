@@ -33,23 +33,21 @@ local FarmToggle = UtilTab:CreateToggle({
     CurrentValue = false,
     Callback = function(Value)
         _G.AutoPower = Value
-
-        coroutine.wrap(function()
-            while _G.AutoPower do
-                for i,v in pairs(workspace.Effects:GetChildren()) do
-                    if v.Name == "Template" then
-                        local Player = game:GetService("Players").LocalPlayer
-                        local Character = Player.Character or Player.CharacterAdded:wait()
-                        if Character then
-                            local HRP = Character:FindFirstChild("HumanoidRootPart")
-
-                            v.CFrame = HRP.CFrame
-                        end
-                    end
-                end
-
-                wait(0.1)
-            end
-        end)()
     end
 })
+
+local function AutoPower()
+    for i,v in pairs(workspace.Effects:GetChildren()) do
+        if v.Name == "Template" and _G.AutoPower then
+            local Player = game:GetService("Players").LocalPlayer
+            local Character = Player.Character or Player.CharacterAdded:wait()
+            if Character then
+                local HRP = Character:FindFirstChild("HumanoidRootPart")
+    
+                v.CFrame = HRP.CFrame
+            end
+        end
+    end
+end
+
+game:GetService("RunService"):BindToRenderStep("AutoPower", 300, AutoPower)
