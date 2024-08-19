@@ -35,7 +35,7 @@ local FarmToggle = UtilTab:CreateToggle({
     end
 })
 
-local function AutoPower()
+game:GetService("RunService").RenderStepped:connect(function()
     for i,v in pairs(workspace:WaitForChild("Effects"):GetChildren()) do
         if v.Name == "Template" and _G.AutoPower then
             local Player = game:GetService("Players").LocalPlayer
@@ -47,6 +47,4 @@ local function AutoPower()
             end
         end
     end
-end
-
-game:GetService("RunService"):BindToRenderStep("AutoPower", 400, AutoPower)
+end)
