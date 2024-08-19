@@ -1,4 +1,5 @@
 _G = {
+    WalkSpeed = 64,
     AutoPower = false
 }
 
