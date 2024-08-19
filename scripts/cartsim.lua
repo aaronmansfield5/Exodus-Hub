@@ -49,4 +49,4 @@ local function AutoPower()
     end
 end
 
-game:GetService("RunService"):BindToRenderStep("AutoPower", 300, AutoPower)
+game:GetService("RunService"):BindToRenderStep("AutoPower", 400, AutoPower)
