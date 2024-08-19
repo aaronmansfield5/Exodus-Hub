@@ -1,5 +1,4 @@
 _G = {
-    WalkSpeed = 64,
     AutoPower = false
 }
 
@@ -37,7 +36,7 @@ local FarmToggle = UtilTab:CreateToggle({
 })
 
 local function AutoPower()
-    for i,v in pairs(workspace.Effects:GetChildren()) do
+    for i,v in pairs(workspace:WaitForChild("Effects"):GetChildren()) do
         if v.Name == "Template" and _G.AutoPower then
             local Player = game:GetService("Players").LocalPlayer
             local Character = Player.Character or Player.CharacterAdded:wait()
