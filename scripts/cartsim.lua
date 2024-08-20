@@ -47,4 +47,10 @@ game:GetService("RunService").RenderStepped:connect(function()
             end
         end
     end
+
+    local Player = game:GetService("Players").LocalPlayer
+    local Character = Player.Character or Player.CharacterAdded:wait()
+    local Humanoid = Character:FindFirstChild("Humanoid")
+
+    Humanoid.WalkSpeed = _G.WalkSpeed
 end)
