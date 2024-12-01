@@ -84,7 +84,7 @@ local ItemWH = RebirthTab:CreateInput({
 })
 
 local BoxesTab = Window:CreateTab("Boxes", 5140907803)
-local BoxesSection1 = BoxesTab:CreateSection("Box Automation")
+local CrateSelection = BoxesTab:CreateSection("Crate Automation")
 local CratesToggle = BoxesTab:CreateToggle({
     Name = "Collect Crates",
     CurrentValue = false,
@@ -96,6 +96,7 @@ local CratesToggle = BoxesTab:CreateToggle({
         end
     end,
 })
+local BoxesSection = BoxesTab:CreateSection("Box Automation")
 local CrateSelection = BoxesTab:CreateDropdown({
     Name = "Box",
     Options = {"Regular","Unreal", "Inferno", "Luxury", "Red-Banded", "Spectral", "Magnificent", "Heavenly", "Pumpkin", "Festive", "Birthday", "Easter", "Cake Raffle", "Twitch"},
