@@ -96,8 +96,8 @@ local CratesToggle = BoxesTab:CreateToggle({
         end
     end,
 })
-local CrateSelection = RebirthTab:CreateDropdown({
-    Name = "Crate",
+local CrateSelection = BoxesTab:CreateDropdown({
+    Name = "Box",
     Options = {"Regular","Unreal", "Inferno", "Luxury", "Red-Banded", "Spectral", "Magnificent", "Heavenly", "Pumpkin", "Festive", "Birthday", "Easter", "Cake Raffle", "Twitch"},
     CurrentOption = {_G.MH.Crates.Current},
     MultipleOptions = false,
@@ -107,7 +107,7 @@ local CrateSelection = RebirthTab:CreateDropdown({
     end,
 })
 local CrateToggle = BoxesTab:CreateToggle({
-    Name = "Collect Crates",
+    Name = "Open Boxes",
     CurrentValue = false,
     Flag = "doCrates",
     Callback = function(Value)
