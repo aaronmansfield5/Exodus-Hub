@@ -123,7 +123,7 @@ local CrateToggle = BoxesTab:CreateToggle({
             end)
         else
             if _G.MH.Crates.Task then
-                task.cancel(_G.Crates.Task)
+                task.cancel(_G.MH.Crates.Task)
                 _G.MH.Crates.Task = nil
             end
         end
