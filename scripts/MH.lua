@@ -6,6 +6,10 @@ _G.MH = {
     webhooks = {
         rebirth = nil,
         item = nil
+    },
+    Crates = {
+        Open = false,
+        Current = "Regular"
     }
 }
 
@@ -89,6 +93,38 @@ local CratesToggle = BoxesTab:CreateToggle({
         _G.MH.doCrates = Value
         if not Value then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.PlayerTycoon.Value.Base.CFrame
+        end
+    end,
+})
+local CrateSelection = RebirthTab:CreateDropdown({
+    Name = "Crate",
+    Options = {"Regular","Unreal", "Inferno", "Luxury", "Red-Banded", "Spectral", "Magnificent", "Heavenly", "Pumpkin", "Festive", "Birthday", "Easter", "Cake Raffle", "Twitch"},
+    CurrentOption = {_G.MH.Crates.Current},
+    MultipleOptions = false,
+    Flag = "crateSelection",
+    Callback = function(Option)
+        _G.MH.Crates.Current = Option[1]
+    end,
+})
+local CrateToggle = BoxesTab:CreateToggle({
+    Name = "Collect Crates",
+    CurrentValue = false,
+    Flag = "doCrates",
+    Callback = function(Value)
+        _G.MH.Crates.Open = Value
+
+        if Value then
+            _G.MH.Crates.Task = task.spawn(function()
+                while _G.MH.Crates.Open do
+                    wait(3)
+                    game:GetService("ReplicatedStorage"):WaitForChild("MysteryBox"):InvokeServer(_G.MH.Crates.Current)
+                end
+            end)
+        else
+            if _G.MH.Crates.Task then
+                task.cancel(_G.Crates.Task)
+                _G.MH.Crates.Task = nil
+            end
         end
     end,
 })
