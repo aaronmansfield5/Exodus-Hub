@@ -348,6 +348,14 @@ ThemeDropdown:OnChanged(function(Value)
     Fluent:SetTheme(Value)
 end)
 
+local VirtualUser = game:GetService('VirtualUser')
+
+game:GetService('Players').LocalPlayer.Idled:connect(function()
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+end)
+
+
 game:GetService("RunService").RenderStepped:connect(function()
     local Player = game:GetService("Players").LocalPlayer
     local Character = Player.Character or Player.CharacterAdded:wait()
