@@ -32,6 +32,23 @@ local Window = Rayfield:CreateWindow({
     KeySystem = false
 })
 
+local ioAlKMOinas = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+
+ioAlKMOinas.Name = "ioAlKMOinas"
+ioAlKMOinas.Parent = game:GetService("CoreGui")
+ioAlKMOinas.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Name = "okewU9da"
+Frame.Parent = ioAlKMOinas
+Frame.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0, 0, -0.100000001, 0)
+Frame.Size = UDim2.new(1, 0, 1.10000002, 0)
+Frame.ZIndex = 0
+Frame.Visible = false
+
 local HomeTab = Window:CreateTab("Home", 5506574548)
 local RebirthTab = Window:CreateTab("Rebirth", 5506488860)
 
@@ -131,6 +148,15 @@ local CrateToggle = BoxesTab:CreateToggle({
 })
 
 local PlayerTab = Window:CreateTab("Player", 5506279557)
+local LowPerformance = PlayerTab:CreateToggle({
+    Name = "Performance Mode",
+    CurrentValue = false,
+    Flag = "lowPerformance",
+    Callback = function(Value)
+        game:GetService("RunService"):Set3dRenderingEnabled(not Value)
+        Frame.Visible = Value
+    end,
+})
 local DeleteButton = PlayerTab:CreateButton({
     Name = "Delete Rayfield",
     Callback = function()
