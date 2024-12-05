@@ -168,7 +168,7 @@ game.ReplicatedStorage.MoneyMirror:FindFirstChild(game.Players.LocalPlayer.Name)
 	skips = game.Players.LocalPlayer.PlayerGui.Rebirth.Frame.Rebirth_Content.Content.Rebirth.Frame.Top.SkipBox.Label
     if(_G.MH.doRebirth and skips.Parent.Visible == true) then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.PlayerTycoon.Value.Base.CFrame
-        wait(0.001)
+        wait(0.5)
         money = newVal --require(game.ReplicatedStorage.MoneyLib).HandleMoney(newVal)
 		local args = {
 			[1] = 26
